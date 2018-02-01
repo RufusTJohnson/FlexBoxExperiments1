@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Class Test</title>
+<link rel="stylesheet" type="text/css" href="../../css/editable_css.css">
+
+</head>
+
+<body>
+<!-- *********************************************************************** -->
+<!-- Container where multiple css and html edit areas are stored             -->
+<!-- for more than one example                                               -->
+<!--                                                                         -->
+<!-- For each example an html text area and a css text area will be added    --> 
+<!-- from javascript:                                                        -->
+<!--                                                                         -->
+<!-- <textarea id="rtj_css_edit_1" class="playable-css"></textarea>          -->
+<!-- <textarea id="rtj_code_edit_1" class="playable-html"></textarea>        -->
+<!--                                                                         -->
+<!-- <textarea id="rtj_css_edit_2" class="playable-css"></textarea>          -->
+<!-- <textarea id="rtj_code_edit_2" class="playable-html"></textarea>        -->
+<!--                               ●                                        -->
+<!--                               ●                                        -->
+<!--                               ●                                        -->
+<!-- <textarea id="rtj_css_edit_n" class="playable-css"></textarea>          -->
+<!-- <textarea id="rtj_code_edit_n" class="playable-html"></textarea>        -->
+<!-- *********************************************************************** -->
+<!-- ************************Begin Example N******************************** -->
+<div id="rtj_multiple_edited_examples">
+
+
+
+</div>
+<!-- End of rtj_multiple_edited_examples -->
+
+</body>
+<script src="../../js/rtj_css_test_support.js" type="text/javascript"> </script>
+
+<script type="text/javascript"> 
+function test4()
+{
+	rtj_Code_edit.init();
+
+	// patterned on this https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox
+   var code_edit 	= new rtj_Code_edit();
+	var title 						= "Title Goes Here";
+	var description_paragraph	= "First Description Paragraph Goes Here";
+	code_edit.add_title(title);
+	code_edit.add_description_paragraph(description_paragraph);
+	//alert("moo");
+	code_edit.render_title_description();
+
+	
+	var html			=	 '<div class="box flex-container">\n'
+							+'   <div>One</div>\n'
+							+'   <div>Two</div>\n'
+							+'   <div>Three</div>\n'
+							+'</div>';
+	code_edit.add_editable_html(html);
+	
+	var css = new rtj_CSS("#rtj_content_"+code_edit.example_index+" .flex-container");
+   css.addDeclaration("display","flex");
+   css.addDeclarations({"display":"flex","background-color":"DodgerBlue"});
+   var css_text = css.get();
+	code_edit.add_editable_css(css_text);
+	
+	
+	
+	// patterned on this https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox
+   var code_edit 	= new rtj_Code_edit();
+	var html			=	 '<div class="box flex-container">\n'
+							+'   <div>One</div>\n'
+							+'   <div>Two</div>\n'
+							+'   <div>Three</div>\n'
+							+'</div>';
+	code_edit.add_editable_html(html);
+	
+	var css = new rtj_CSS("#rtj_content_"+code_edit.example_index+" .flex-container");
+   css.addDeclaration("display","flex");
+   css.addDeclarations({"display":"flex","background-color":"DodgerBlue"});
+   var css_text = css.get();
+	code_edit.add_editable_css(css_text);
+	var code_edit = new rtj_Code_edit();
+	var code_edit = new rtj_Code_edit();
+}
+test4();
+</script>
+
+</html>
