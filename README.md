@@ -11,6 +11,7 @@ Just a bunch of HTML5 CSS3 FlexBox Tests
 
 [And Here](https://github.com/mdn/css-examples)
 
+Useful Links
 
-
+[Read local text file with javascript - Stack Overflow](https://stackoverflow.com/questions/42088285/read-local-text-file-with-javascript/42088825#42088825)
 
