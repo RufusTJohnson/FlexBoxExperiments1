@@ -45,8 +45,11 @@ function test4()
 
 	// patterned on this https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox
    var code_edit 	= new rtj_Code_edit();
-	var title 						= "Title Goes Here";
-	var description_paragraph	= "First Description Paragraph Goes Here";
+	var title 						= "Basic Flex Container";
+	var description_paragraph	= 
+							'This is the simplest FlexBox setup.  The <strong>flex-direction</strong> property defaults to <b>row</b>.'
+							+'The <strong>flex-wrap</strong> property defaults to nowrap.  The <a href="https://www.w3schools.com/cssref/css3_pr_flex-flow.asp">CSS flex-flow property</a>'
+							+' encapsulates <strong>flex-direction</strong> and <strong>flex-wrap</strong>';
 	code_edit.add_title(title);
 	code_edit.add_description_paragraph(description_paragraph);
 	//alert("moo");
@@ -62,7 +65,7 @@ function test4()
 	
 	var css = new rtj_CSS("#rtj_content_"+code_edit.example_index+" .flex-container");
    css.addDeclaration("display","flex");
-   css.addDeclarations({"display":"flex","background-color":"DodgerBlue"});
+   //css.addDeclarations({"display":"flex","background-color":"DodgerBlue"});
    var css_text = css.get();
 	code_edit.add_editable_css(css_text);
 	

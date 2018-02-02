@@ -478,8 +478,6 @@ class rtj_Code_edit
 
 		var example_id				=  "rtj_example_"+this.example_index;
 		var example_container	=   "<div id=\""+example_id+"\" class=\"rtj_example\"></div>"
-		examples.insertAdjacentHTML('beforeend',example_container);
-      var example 				= 	document.querySelector('#'+example_id);
 		
 		
 		var content		=	 "<div id=\""+description_id+"\" class=\"rtj_description\"></div>"
@@ -492,9 +490,11 @@ class rtj_Code_edit
 		
 		//examples.insertAdjacentText('beforeend',"\n...\n");
 		
-		this.preElementBanneredComment(example,comment_begin);
+		this.preElementBanneredComment(examples,comment_begin);
+		examples.insertAdjacentHTML('beforeend',example_container);
+      var example 				= 	document.querySelector('#'+example_id);
 		example.insertAdjacentHTML('beforeend',content);
-		this.postElementBanneredComment(example,comment_end);
+		this.postElementBanneredComment(examples,comment_end);
 
 
 		

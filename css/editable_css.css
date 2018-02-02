@@ -38,7 +38,8 @@ textarea:nth-of-type(2) {
 	font-size: 100%;
 }
 
-section {
+/*section */
+.rtj_content {
 	width: 90%;
 	max-width: 700px;
 	border: 1px solid #4D4E53;
@@ -47,7 +48,9 @@ section {
 	margin-bottom: 10px;
 }
 
-section input {
+/* section input */
+.rtj_content input
+{
 	display: block;
 	margin: 5px;
 }
